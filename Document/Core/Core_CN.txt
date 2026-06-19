@@ -1,0 +1,24 @@
+UnityFramework_Core 1.0
+这是一个unity游戏框架的核心，在Unity6.4LTS中编写。
+项目内置插件管理器、资源管理器和输入管理器以及一个简单的debug脚本用于演示。
+所有测试脚本都在'Asset/Test'目录下，本核心代码在'Asset/Script/Core'目录下。
+>>项目代码没有经过任何优化只能正常运行，仅供学习交流<<
+命名空间 'UnityFramework_Core'
+by Papa
+
+项目资源:
+名称:				作用:
+控制台管理器:√		为游戏提供一个简单的控制台。(ConsoleManager)
+资源管理器:√		管理游戏资源。(ResourceManager)
+输入管理器:√		处理玩家输入。(InputManager)
+
+项目中命名规则:
+类型:	规则:		示例:
+常量	全部大写	GLOBAL
+静态	前缀s_		s_lilium
+方法	大驼峰		AddNumber
+类型	大驼峰		GameObject
+接口	前缀I		IGamePool
+成员	小驼峰		objectName
+私有	前后缀_		_gameTick_
+局部	前缀_		_name
