@@ -3,7 +3,8 @@ UnityFramework_Core 1.0
 This is the core of a Unity game framework, written in Unity 6.4 LTS.
 The project includes a built-in plugin manager, resource manager, input manager, and a simple debug script for demonstration purposes.
 All test scripts are located in the 'Asset/Test' directory, while the core code is in 'Asset/Script/Core'.
->>The project code has not been optimized in any way and can only run normally; it is for learning and communication purposes only<<
+>>The project code has not been optimized in any way and can only run normally; it is for learning and communication purposes only
+
 Namespace 'UnityFramework_Core'
 by Papa
 
