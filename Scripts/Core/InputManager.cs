@@ -81,15 +81,22 @@ namespace UnityFramework_Core
 
         private void Update()
         {
-            if (enableInput)
-                foreach (var _keyEventBind in keyArray)
-                {
-                    if (_keyEventBind == null) continue;
-                    if (isTrigger(_keyEventBind))
+            try
+            {
+                if (enableInput)
+                    foreach (var _keyEventBind in keyArray)
                     {
-                        _keyEventBind.invokeEvent?.Invoke();
+                        if (_keyEventBind == null) continue;
+                        if (isTrigger(_keyEventBind))
+                        {
+                            _keyEventBind.invokeEvent?.Invoke();
+                        }
                     }
-                }
+            }
+            catch (Exception ex)
+            {
+                errorCallBack?.Invoke(ex);
+            }
         }
 
         public Dictionary<string, KeyEventBind> ListAllKeyEvent()
