@@ -16,6 +16,7 @@ All test scripts are located in the `Asset/Test` directory, while the core code 
 | Console Manager:√ | Provides a simple console for the game. (ConsoleManager) |
 | Resource Manager:√ | Manages game resources. (ResourceManager) |
 | Input Manager:√ | Handles player input. (InputManager) |
+| Event Manager:√ | Provides interfaces for creating events and listening to events, with some logging capabilities. (EventManager) |
 
 ## Naming Conventions
 
