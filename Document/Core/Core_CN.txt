@@ -11,6 +11,7 @@ by Papa
 控制台管理器:√		为游戏提供一个简单的控制台。(ConsoleManager)
 资源管理器:√		管理游戏资源。(ResourceManager)
 输入管理器:√		处理玩家输入。(InputManager)
+事件管理器:√		提供创建事件与监听事件的接口，并有一定的日志功能。(EventManager)
 
 项目中命名规则:
 类型:	规则:		示例:

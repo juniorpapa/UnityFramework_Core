@@ -22,7 +22,6 @@ namespace UnityFramework_Core
             _consoleManager.consoleList.Add("console_Test", new Console());
             _consoleManager.consoleList["console_Test"].token["help"] = () => { return new Tree_Help(); };
             _consoleManager.consoleList["console_Test"].Execute("help");
-
             // ResourceManager
         }
 

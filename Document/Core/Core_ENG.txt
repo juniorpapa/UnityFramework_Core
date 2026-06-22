@@ -7,18 +7,19 @@ Namespace 'UnityFramework_Core'
 by Papa
 
 Project Resources:
-Name:					Purpose:
-Console Manager:√		Provides a simple console for the game. (ConsoleManager)
-Resource Manager:√		Manages game resources. (ResourceManager)
-Input Manager:√		Handles player input. (InputManager)
+Name:                   Purpose:
+Console Manager:√      Provides a simple console for the game. (ConsoleManager)
+Resource Manager:√     Manages game resources. (ResourceManager)
+Input Manager:√        Handles player input. (InputManager)
+Event Manager:√		Provides interfaces for creating events and listening to events, with some logging capabilities. (EventManager)
 
 Naming conventions in the project:
-Type:		Rule:			Example:
-Constants		ALL UPPERCASE		GLOBAL
-Static		Prefix s_			s_lilium
-Method		PascalCase		AddNumber
-Type		PascalCase		GameObject
-Interface		Prefix I			IGamePool
-Member		camelCase		objectName
-Private		Prefix and suffix _		_gameTick_
-Local		Prefix _			_name
+Type:           Rule:                   Example:
+Constants       ALL UPPERCASE           GLOBAL
+Static          Prefix s_               s_lilium
+Method          PascalCase              AddNumber
+Type            PascalCase              GameObject
+Interface       Prefix I                IGamePool
+Member          camelCase               objectName
+Private         Prefix and suffix _     _gameTick_
+Local           Prefix _                _name
