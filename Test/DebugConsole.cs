@@ -22,7 +22,13 @@ namespace UnityFramework_Core
             _consoleManager.consoleList.Add("console_Test", new Console());
             _consoleManager.consoleList["console_Test"].token["help"] = () => { return new Tree_Help(); };
             _consoleManager.consoleList["console_Test"].Execute("help");
+            _consoleManager.consoleList["console_Test"].consoleWindow.isWindowVisible = true;
             // ResourceManager
+        }
+        void OnGUI()
+        {
+            IConsoleManager _consoleManager = GameObject.Find("ConsoleManager").GetComponent<ConsoleManager>();
+            _consoleManager.consoleList["console_Test"].consoleWindow.DrawConsoleWindow();
         }
 
         private void DEBUGLOD()
