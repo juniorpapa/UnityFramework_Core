@@ -130,11 +130,11 @@ namespace UnityFramework_Core
         public Func<string, object, bool> execute { get; set; } = null;
         public Action<Exception> errorCallBack { get; set; } = null;
         public bool isWindowVisible { get; set; } = false;
-        public Vector2 initialSize { get; set; } = new Vector2(500f, 350f);
+        public Vector2 initialSize { get; set; } = new Vector2(600f, 500f);
         public Vector2 initialPos { get; set; } = new Vector2(20f, 20f);
         public Vector2 scrollPos { get; set; } = Vector2.zero;
-        public Vector2 widthSize { get; set; } = new Vector2(300f, 700f);
-        public Vector2 heightSize { get; set; } = new Vector2(150f, 550f);
+        public Vector2 widthSize { get; set; } = new Vector2(200f, 600f);
+        public Vector2 heightSize { get; set; } = new Vector2(150f, 500f);
         public Rect windowRect { get; set; }
         public List<string> logs { get; set; } = new List<string>();
         public int buttonWidth { get; set; } = 30;
@@ -171,10 +171,10 @@ namespace UnityFramework_Core
                 windowRect,
                 DrawWindow,
                 consoleName,
-                GUILayout.MinWidth(widthSize.x),  
-                GUILayout.MaxWidth(widthSize.y),   
-                GUILayout.MinHeight(heightSize.x),  
-                GUILayout.MaxHeight(heightSize.y) 
+                GUILayout.MinWidth(widthSize.x),
+                GUILayout.MaxWidth(widthSize.y),
+                GUILayout.MinHeight(heightSize.x),
+                GUILayout.MaxHeight(heightSize.y)
             );
         }
         public virtual void DrawWindow(int _windowID)
@@ -190,7 +190,7 @@ namespace UnityFramework_Core
             {
                 logs.RemoveRange(0, logs.Count - logsSize);
             }
-            GUILayout.Label(string.Join("\n", logs), GUILayout.ExpandWidth(true));
+            GUILayout.TextArea(string.Join("\n", logs), GUILayout.ExpandWidth(true));
             GUILayout.EndScrollView();
             // button
             GUILayout.BeginHorizontal();
@@ -210,13 +210,13 @@ namespace UnityFramework_Core
             GUILayout.EndHorizontal();
             GUILayout.EndVertical();
             GUI.DragWindow();
-            scrollPos = new Vector2(scrollPos.x, Mathf.Infinity);
         }
         // API
         public virtual void Debug_Log(string _text)
         {
             Debug.Log(_text);
             logs.Add(_text);
+            scrollPos = new Vector2(scrollPos.x, Mathf.Infinity);
         }
     }
     public abstract class Tree_Base
