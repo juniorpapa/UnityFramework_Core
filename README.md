@@ -1,32 +1,15 @@
-# UnityFramework_Core 1.0
+# UnityFramework_Core v1.5
 
-This is the core of a Unity game framework, written in Unity 6.4 LTS.  
-The project includes a built-in plugin manager, resource manager, input manager, and a simple debug script for demonstration purposes.  
-All test scripts are located in the `Asset/Test` directory, while the core code is in `Asset/Script/Core`.
+v1.5 merges the original `juniorpapa/UnityFramework_Core2.0` into this project by overwriting it with the latest 2.0 files and deleting the old `UnityFramework_Core2.0` project.
 
-> **Note:** The project code has not been optimized in any way and can only run normally; it is for learning and communication purposes only.
+`OldKeyInput` has been modified to make the code easier to extend and decouple. `NewKeyInput` has been temporarily removed. Some issues in other files have also been fixed.
 
-**Namespace:** `UnityFramework_Core`  
-**Author:** Papa
+The code is located under `Core/Script`. The folder name is misspelled as `Scrpit` (missing an “s”); I only noticed it recently and have not renamed it.
 
-## Project Resources
+> This project is intended for learning and exchange only. It is not recommended for production use.
 
-| Name | Purpose |
-|------|---------|
-| Console Manager:√ | Provides a simple console for the game. (ConsoleManager) |
-| Resource Manager:√ | Manages game resources. (ResourceManager) |
-| Input Manager:√ | Handles player input. (InputManager) |
-| Event Manager:√ | Provides interfaces for creating events and listening to events, with some logging capabilities. (EventManager) |
+## Project Structure
 
-## Naming Conventions
-
-| Type | Rule | Example |
-|------|------|---------|
-| Constants | ALL UPPERCASE | `GLOBAL` |
-| Static | Prefix `s_` | `s_lilium` |
-| Method | PascalCase | `AddNumber` |
-| Type | PascalCase | `GameObject` |
-| Interface | Prefix `I` | `IGamePool` |
-| Member | camelCase | `objectName` |
-| Private | Prefix and suffix `_` | `_gameTick_` |
-| Local | Prefix `_` | `_name` |
+```text
+Core/
+└── Script/    # Note: the folder name is misspelled as "Scrpit"
