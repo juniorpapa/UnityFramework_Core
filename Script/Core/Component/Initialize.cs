@@ -26,7 +26,8 @@ namespace UnityFramework_Core.Script
             var _g = GameObject.Find("GAMEENV");
             var _log = new GameLog() { env = _g.GetComponent<Environment>(), getTime = () => DateTime.Now };
             _e.scripts.Add("GameLog", _log);
-            _g.AddComponent<ConsoleWindow>();
+            var _cw = _g.AddComponent<ConsoleWindow>();
+            _cw.environment = _e;
             _g.AddComponent<OldKeyInput>();
             _log.logs.Add("Initialization complete");
         };

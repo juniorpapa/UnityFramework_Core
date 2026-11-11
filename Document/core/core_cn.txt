@@ -1,4 +1,7 @@
-UnityFramework_Core2.0 v1.0
+UnityFramework_Core v1.5
+v1.5将原本juniorpapa/UnityFramework_Core2.0与该项目合并(用2.0的最新文件直接覆盖并删除了旧的UnityFramework_Core2.0项目)
+修改OldKeyInput，让代码更易拓展并解耦。暂时移除NewKeyInput。修改了一些其他文件的问题。
+代码在Core/Script，文件Scrpit忘加s，但我刚刚才发现所以懒得改。
 本项目仅供学习交流，不推荐使用。
 
 Class:			作用:
@@ -15,7 +18,7 @@ OldKeyInput		基于旧输入系统的键位系统。
 Storage			存储数据于本地。
 GameComponent	游戏内所有对象属性等都由类似unity的component组成，所有component都在GameComponent下。
 HotFixActuator	进行游戏热更新。
-NewKeyInput		基于新输入系统的键位系统。
+NewKeyInput		基于新输入系统的键位系统。(暂时移除)
 
 命名规则:
 成员变量    water

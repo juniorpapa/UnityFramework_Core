@@ -41,7 +41,7 @@ namespace UnityFramework_Core.Script
             if (!File.Exists(Path.Combine(hotFixPath, _d, "Infor.txt"))) return null;
             try
             {
-                string _t = File.ReadAllText(_d);
+                string _t = File.ReadAllText(Path.Combine(hotFixPath, _d, "Infor.txt"));
                 var _r = JsonUtility.FromJson<PackageInfor>(_t);
                 return _r;
             }
@@ -79,12 +79,12 @@ namespace UnityFramework_Core.Script
     }
     public class PackageInfor
     {
-        public string name { get; set; }
-        public string packgeVersion { get; set; }
-        public int[] HSV { get; set; } // Highest supported version
-        public int[] LSV { get; set; } // lowest supported version
-        public string[] creator { get; set; }
-        public string[] dependency { get; set; }
-        public string[] startScript { get; set; } // 0 CSharp 1 Lua 2 JavaScript 3 Python
+        public string name;
+        public string packgeVersion;
+        public int[] HSV; // Highest supported version
+        public int[] LSV; // lowest supported version
+        public string[] creator;
+        public string[] dependency;
+        public string[] startScript; // index : 0 CSharp 1 Lua 2 JavaScript 3 Python
     }
 }

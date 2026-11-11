@@ -1,28 +1,37 @@
-UnityFramework_Core2.0 v1.0
-This project is for learning and communication only, and is not recommended for use.
+UnityFramework_Core v1.5
 
-Class:              Function:
-EventManager        Stores and manages in-game events.
-ResourceManager     Stores and manages in-game resources.
-ScriptManager       Manages C#/sandbox scripts.
+v1.5 merges the original juniorpapa/UnityFramework_Core2.0 with this project (by directly overwriting with the latest files from 2.0 and deleting the old UnityFramework_Core2.0 project).
+OldKeyInput was modified to make the code easier to extend and decouple. NewKeyInput has been temporarily removed. Some issues in other files were fixed.
+The code is under Core/Script. The folder is misspelled as Scrpit (missing an “s”); I only just noticed it, so I’m lazy to change it.
+This project is for learning and exchange only; it is not recommended for use.
 
-Environment         Stores scripts in the game that do not inherit from Mono.
-GameLog             Game log.
-ConsoleWindow       Console window.
-Initialize          Initializes the game.
-OldKeyInput         Key binding system based on the old input system.
+Class	Purpose
+EventManager	Stores and manages in-game events.
+ResourceManager	Stores and manages in-game resources.
+ScriptManager	Manages C#/sandbox scripts.
+Environment	Stores scripts in the game that do not inherit from Mono.
+GameLog	Game log.
+ConsoleWindow	Console window.
+Initialize	Initializes the game.
+OldKeyInput	Keybinding system based on the old input system.
+Storage	Stores data locally.
+GameComponent	All in-game object properties, etc., are composed of Unity-like components; all components are under GameComponent.
+HotFixActuator	Performs game hot updates.
+NewKeyInput	Keybinding system based on the new input system. (Temporarily removed)
+Naming rules:
 
-Storage             Stores data locally.
-GameComponent       All in-game object properties, etc. are composed of Unity-like components, and all components are under GameComponent.
-HotFixActuator      Performs game hot updates.
-NewKeyInput         Key binding system based on the new input system. (Not implemented.)
+Member variable: water
 
-Naming conventions:
-Member variable     water
-Private variable    _water_
-Static variable     s_water
-Read-only variable  r_water
-Local variable      _water
-Method              SayHello
-Interface           ISayHello
-Class               Console
+Private variable: _water_
+
+Static variable: s_water
+
+Read-only variable: r_water
+
+Local variable: _water
+
+Method: SayHello
+
+Interface: ISayHello
+
+Class: Console

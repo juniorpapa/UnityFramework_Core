@@ -20,7 +20,7 @@ namespace UnityFramework_Core
         private byte _execute_ = 0;
         private int _pos_ = -1;
         private string[] _list_ = null;
-        public byte mixExecute = 20;
+        public byte maxExecute = 20;
         public Dictionary<string, Func<object, object>> token;
 
         public object Execute(string _text)
@@ -36,7 +36,11 @@ namespace UnityFramework_Core
         public bool ExecuteText(string _code, object _obj = null)
         {
             _execute_++;
-            if (_execute_ > mixExecute) return false;
+            if (_execute_ > maxExecute || (_obj is bool && (bool)_obj == false))
+            {
+                End();
+                return false;
+            }
             if (_list_ == null)
             {
                 int _pos = _code.Length - 1;
@@ -51,7 +55,11 @@ namespace UnityFramework_Core
                     {
                         int _lastQuote = _pos;
                         int _firstQuote = _code.LastIndexOf('\"', _lastQuote - 1);
-                        if (_firstQuote == -1) return false;
+                        if (_firstQuote == -1)
+                        {
+                            End();
+                            return false;
+                        }
                         string _sub = _code.Substring(_firstQuote + 1, _lastQuote - _firstQuote - 1);
                         _code = _code.Substring(0, _firstQuote).TrimEnd();
                         _list_ = string.IsNullOrEmpty(_code) ? new string[0] : _code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -73,16 +81,26 @@ namespace UnityFramework_Core
                         _pos_--;
                         return ExecuteText(_code, _val?.Invoke(_obj));
                     }
+                    if (_pos_ < 1)
+                    {
+                        End();
+                        return false;
+                    }
                     _pos_--;
-                    return ExecuteText(_code, _list_[_pos_]);
+                    return ExecuteText(_code, _list_[_pos_ + 1]);
                 }
                 catch
                 {
                     
                 }
             }
-            else End();
-            return true;
+            else
+            {
+                End();
+                return true;
+            }
+            End();
+            return false;
         }
         public bool ExecuteLines(string _code)
         {
