@@ -15,7 +15,6 @@ ConsoleWindow	Console window.
 Initialize	Initializes the game.
 OldKeyInput	Keybinding system based on the old input system.
 Storage	Stores data locally.
-GameComponent	All in-game object properties, etc., are composed of Unity-like components; all components are under GameComponent.
 HotFixActuator	Performs game hot updates.
 NewKeyInput	Keybinding system based on the new input system. (Temporarily removed)
 Naming rules:

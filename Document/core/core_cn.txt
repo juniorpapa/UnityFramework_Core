@@ -16,7 +16,6 @@ Initialize		初始化游戏。
 OldKeyInput		基于旧输入系统的键位系统。
 
 Storage			存储数据于本地。
-GameComponent	游戏内所有对象属性等都由类似unity的component组成，所有component都在GameComponent下。
 HotFixActuator	进行游戏热更新。
 NewKeyInput		基于新输入系统的键位系统。(暂时移除)
 

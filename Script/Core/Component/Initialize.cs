@@ -28,8 +28,12 @@ namespace UnityFramework_Core.Script
             _e.scripts.Add("GameLog", _log);
             var _cw = _g.AddComponent<ConsoleWindow>();
             _cw.environment = _e;
-            _g.AddComponent<OldKeyInput>();
+            var _oldK = _g.AddComponent<OldKeyInput>();
             _log.logs.Add("Initialization complete");
+
+            _oldK.environment = _e;
+            _oldK.keys = new System.Collections.Generic.Dictionary<string, KeyEvent>();
+
         };
         public bool AddScripts()
         {
